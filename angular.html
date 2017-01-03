@@ -1,0 +1,81 @@
+<!--angular的加法实现-->
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Document</title>-->
+    <!--<script src="node_modules/angular/angular.min.js"></script>-->
+<!--</head>-->
+<!--<body ng-app ng-init="one=0;two=0">-->
+<!--<input type="text" ng-model="one">-->
+<!--+-->
+<!--<input type="text" ng-model="two">-->
+<!--=-->
+<!--<span>{{one*1+two*1}}</span>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!--原生的加法实现-->
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Document</title>-->
+    <!--<script>-->
+        <!--window.onload=function(){-->
+            <!--var one=document.getElementById("one");-->
+            <!--var two=document.getElementById("two");-->
+            <!--var sum=document.getElementById("sum");-->
+            <!--one.oninput=function(){-->
+                <!--var onen = parseFloat(this.value)?parseFloat(this.value):0;-->
+                <!--var twon = parseFloat(two.value)?parseFloat(two.value):0;-->
+                <!--sum.value=onen+twon;-->
+            <!--}-->
+            <!--two.oninput=function(){-->
+                <!--var onen = parseFloat(one.value)?parseFloat(one.value):0;-->
+                <!--var twon = parseFloat(this.value)?parseFloat(this.value):0;-->
+                <!--sum.value=onen+twon;-->
+            <!--}-->
+        <!--}-->
+
+    <!--</script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<input type="text" id="one">-->
+<!--+-->
+<!--<input type="text" id="two">-->
+<!--=-->
+<!--<input type="text" id="sum">-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!--自定义模块-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <!--
+    模块化开发
+
+    -->
+</head>
+<body ng-app="myapp">
+<div ng-controller="ctrl">
+    <input type="text" ng-model="aa">
+    {{aa}}
+</div>
+
+
+</body>
+<script>
+    angular.module("myapp",[])
+        .controller("ctrl",function($scope){
+            $scope.aa=123;
+        })
+</script>
+</html>
