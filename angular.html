@@ -53,29 +53,48 @@
 
 
 <!--自定义模块-->
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Document</title>-->
+    <!--<script src="node_modules/angular/angular.min.js"></script>-->
+    <!--&lt;!&ndash;-->
+    <!--模块化开发-->
+
+    <!--&ndash;&gt;-->
+<!--</head>-->
+<!--<body ng-app="myapp">-->
+<!--<div ng-controller="ctrl">-->
+    <!--<input type="text" ng-model="aa">-->
+    <!--{{aa}}-->
+<!--</div>-->
+
+
+<!--</body>-->
+<!--<script>-->
+    <!--angular.module("myapp",[])-->
+        <!--.controller("ctrl",function($scope){-->
+            <!--$scope.aa=123;-->
+        <!--})-->
+<!--</script>-->
+<!--</html>-->
+
+
+
 <!doctype html>
-<html lang="en">
+<html ng-app="myapp">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
     <script src="node_modules/angular/angular.min.js"></script>
-    <!--
-    模块化开发
-
-    -->
 </head>
-<body ng-app="myapp">
-<div ng-controller="ctrl">
-    <input type="text" ng-model="aa">
-    {{aa}}
-</div>
-
-
+<body>
+your name is:
+<input type="text" ng-model="yourname" placeholder="world">
+<hr>
+hello {{yourname || 'world'}}
+<p>1 + 2 = {{ 1 + 2 }}</p>
 </body>
+</html>
 <script>
     angular.module("myapp",[])
-        .controller("ctrl",function($scope){
-            $scope.aa=123;
-        })
 </script>
-</html>
